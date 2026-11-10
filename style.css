@@ -245,3 +245,6 @@ img { max-width: 100%; display: block; }
 .res-card li { color: var(--card-text); }
 .res-card li::marker { color: var(--card-accent); }
 @media (prefers-reduced-motion: reduce) { .res-card:hover { transform: none; } }
+
+.res-intro { display: grid; gap: 10px; }
+.res-head p.res-ko-lead { font-family: "Noto Sans KR", var(--font-body); font-size: .95rem; color: var(--muted); word-break: keep-all; }

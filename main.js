@@ -92,7 +92,8 @@
           '<p>' + esc(r.summary) + '</p><ul>' + r.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + '</ul></div></article>';
       }).join("");
       return '<div class="wrap"><header class="res-head"><div><span class="eyebrow">Research</span><h1>Research</h1></div><span class="res-divider" aria-hidden="true"></span>' +
-        '<p>We aim to make industrial separations cleaner and more energy-efficient. From the physics of molecular transport to new materials and working membranes, we connect <strong>fundamental understanding with real-world separation technology</strong> for the energy and environmental industries.</p></header>' +
+        '<div class="res-intro"><p>We aim to make industrial separations cleaner and more energy-efficient. From the physics of molecular transport to new materials and working membranes, we connect <strong>fundamental understanding with real-world separation technology</strong> for the energy and environmental industries.</p>' +
+        '<p class="res-ko-lead" lang="ko">우리는 산업 분리 공정을 더 깨끗하고 에너지 효율적으로 만드는 것을 목표로 합니다. 분자 수송의 물리에서 출발해 새로운 소재와 실제로 작동하는 분리막까지, 에너지·환경 산업을 위해 근본적인 이해와 실용적인 분리 기술을 연결합니다.</p></div></header>' +
         '<section class="section"><div class="res-grid">' + cards + '</div></section></div>';
     },
 
