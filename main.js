@@ -92,7 +92,7 @@
           '<p>' + esc(r.summary) + '</p><ul>' + r.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + '</ul></div></article>';
       }).join("");
       return '<div class="wrap"><header class="res-head"><div><span class="eyebrow">Research</span><h1>Research</h1></div><span class="res-divider" aria-hidden="true"></span>' +
-        '<p>Our group asks a practical question: given a polymer and a mixture, can we <strong>predict the separation before we make the membrane?</strong> We answer it with experiments, transport theory and data.</p></header>' +
+        '<p>We aim to make industrial separations cleaner and more energy-efficient. From the physics of molecular transport to new materials and working membranes, we connect <strong>fundamental understanding with real-world separation technology</strong> for the energy and environmental industries.</p></header>' +
         '<section class="section"><div class="res-grid">' + cards + '</div></section></div>';
     },
 
