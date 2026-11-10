@@ -124,6 +124,8 @@
         '<h2>The test mixture</h2>' +
         '<p>The benchmark uses toluene and 1,3,5-triisopropylbenzene (TIPB). The pair is a practical choice: both molecules are rigid, close in polarity and viscosity, liquid at room temperature, and easy to quantify by gas chromatography. Differences in performance therefore come mainly from the membrane rather than from the mixture.</p>' +
         '<div class="facts"><div class="fact"><b>Mode</b><span>Cross-flow permeation</span></div><div class="fact"><b>Pressure</b><span>8–60 bar</span></div><div class="fact"><b>Temperature</b><span>293 K</span></div><div class="fact"><b>Feed</b><span>1–10 mol% TIPB in toluene</span></div></div>' +
+        '<figure class="figure"><img src="osro-tradeoff-curve.png" alt="OSRO trade-off curve: toluene/TIPB separation factor versus permeance for polymer and composite membranes, with a dashed upper-bound line" width="2040" height="1412" loading="lazy">' +
+        '<figcaption>Toluene/TIPB separation factor versus permeance (cross-flow, 8–60 bar, 293 K, 1–10 mol% TIPB). Figure compiled by Yi Ren and Woo Jin Jang, Lively Lab, Georgia Tech (updated November 2025); used with permission. Numbered references in the legend are listed on the Lively Lab page.</figcaption></figure>' +
         '<h2>Latest curve and data</h2>' +
         '<p class="source-note">The curve and its master data sheet are compiled and periodically updated by the Lively Lab at Georgia Tech, where Prof. Lee completed his Ph.D. Please use their page for the current figure and data.</p>' +
         '<p class="btn-row"><a class="btn btn-primary" href="https://lively.chbe.gatech.edu/osro-upper-bound" target="_blank" rel="noopener noreferrer">View the curve at the Lively Lab →</a></p>' +
