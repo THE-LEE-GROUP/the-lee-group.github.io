@@ -2,12 +2,12 @@
 /* Current palette: H. Ink Black & Electric Cyan. Other saved palettes: see PALETTES.md */
 :root {
   --ink: #0b0e13; --text: #2b313a; --muted: #646b75; --bg: #f7f9fb; --surface: #ffffff;
-    --line: #e0e5ea; --primary: #0b0e13; --primary-soft: #e9eef2; --accent: #0e7490; --accent-soft: #dff4f8;
+    --line: #e0e5ea; --primary: #0b0e13; --primary-soft: #e9eef2; --accent: #0891b2; --accent-soft: #dff4f8;
   --hero-bg: #07090d;
   --hero-rgb: 7, 9, 13; --hero-line-rgb: 127, 216, 236; --hero-dot-rgb: 34, 211, 238;
   --hero-eyebrow: #67e8f9; --hero-lead: #cdd6df;
   --card-top: #0f151c; --card-bot: #06080b; --glow-rgb: 34, 211, 238; --card-accent: #22d3ee; --card-text: #cdd6df; --card-sub: #94a0ab;
-  --hero-ink: #eef4fa; --on-accent: #ffffff; --fill: #0e7490; --fill-hover: #155e75;
+  --hero-ink: #eef4fa; --on-accent: #ffffff;
   --font-display: "Manrope", "Noto Sans KR", system-ui, sans-serif;
   --font-body: "IBM Plex Sans", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
   --radius: 10px;
@@ -18,13 +18,13 @@
   :root:not([data-theme="light"]) {
     --ink: #eef3f7; --text: #c6ced6; --muted: #8a939d; --bg: #06080b; --surface: #0f1318;
     --line: #1f262e; --primary: #67e8f9; --primary-soft: #0f2a30; --accent: #22d3ee; --accent-soft: #0c2a31;
-    --on-accent: #ffffff; color-scheme: dark;
+    --on-accent: #06080b; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --ink: #eef3f7; --text: #c6ced6; --muted: #8a939d; --bg: #06080b; --surface: #0f1318;
     --line: #1f262e; --primary: #67e8f9; --primary-soft: #0f2a30; --accent: #22d3ee; --accent-soft: #0c2a31;
-  --on-accent: #ffffff; color-scheme: dark;
+  --on-accent: #06080b; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -89,8 +89,8 @@ img { max-width: 100%; display: block; }
 
 .eyebrow { font: 700 .78rem var(--font-display); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 8px; font: 700 .95rem var(--font-display); text-decoration: none; border: 1px solid transparent; cursor: pointer; background: none; }
-.btn-primary { background: var(--fill); color: var(--on-accent); }
-.btn-primary:hover { background: var(--fill-hover); color: var(--on-accent); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: var(--primary); color: var(--on-accent); }
 .btn-ghost { border-color: var(--line); color: var(--ink); }
 .btn-ghost:hover { background: var(--primary-soft); color: var(--primary); }
 .btn-text { color: var(--muted); padding-inline: 8px; }
@@ -145,7 +145,7 @@ img { max-width: 100%; display: block; }
 .pub-tools input { flex: 1 1 260px; padding: 11px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
 .chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .chip { border: 1px solid var(--line); background: var(--surface); color: var(--text); border-radius: 999px; padding: 6px 13px; font: 600 .85rem var(--font-display); cursor: pointer; }
-.chip[aria-pressed="true"] { background: var(--fill); border-color: var(--fill); color: var(--on-accent); }
+.chip[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: var(--on-accent); }
 .pub-year { font: 800 1.4rem var(--font-display); color: var(--ink); padding: 22px 0 6px; font-variant-numeric: tabular-nums; }
 .pubs { list-style: none; margin: 0; padding: 0; counter-reset: none; }
 .pub { padding: 14px 0 14px 18px; border-left: 2px solid var(--line); margin-left: 4px; display: grid; gap: 4px; }
@@ -183,7 +183,7 @@ img { max-width: 100%; display: block; }
 .modal-top { display: flex; justify-content: space-between; align-items: center; }
 .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .lang-switch button { border: 0; background: transparent; color: var(--muted); padding: 6px 12px; font: 700 .82rem var(--font-display); cursor: pointer; }
-.lang-switch button[aria-pressed="true"] { background: var(--fill); color: var(--on-accent); }
+.lang-switch button[aria-pressed="true"] { background: var(--primary); color: var(--on-accent); }
 .modal-x { border: 0; background: none; font-size: 1.6rem; line-height: 1; color: var(--muted); cursor: pointer; padding: 4px 8px; }
 .modal-eyebrow { font: 700 .76rem var(--font-display); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-top: 6px; }
 .modal h2 { font-size: 1.45rem; }
