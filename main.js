@@ -55,11 +55,12 @@
         "<p>Separations account for a large share of industrial energy use. Membranes can cut that cost, if we can predict and engineer how mixtures move through them.</p></div>" +
         researchCards(false) + '<p style="margin-top:20px"><a class="link-arrow" href="#research">Read more about our research →</a></p></div></section>' +
         '<section class="section"><div class="wrap split"><div><div class="section-head"><span class="eyebrow">News</span><h2>Latest from the lab</h2></div>' +
-        newsList(4) + '<p style="margin-top:16px"><a class="link-arrow" href="#news">All news →</a></p></div>' +
+        newsList(4) + '<p style="margin-top:16px"><a class="link-arrow" href="#news">All news →</a></p>' +
+        '<div class="join-box" style="margin-top:40px"><span class="eyebrow">Join us · 연구실 모집</span><h3 style="font-size:1.35rem">' + esc(R.en.title) + '</h3>' +
+        (R.en.hook ? '<p class="hook">' + esc(R.en.hook) + '</p>' : '') + '<p>' + esc(R.en.body) + '</p><p><a class="btn btn-primary" href="#join">Open positions</a></p></div></div>' +
         '<div><div class="section-head"><span class="eyebrow">Selected work</span><h2>Highlights</h2></div><ul class="pubs">' +
         top.map(pubItem).join("") + '</ul><p style="margin-top:16px"><a class="link-arrow" href="#publications">All publications →</a></p></div></div></section>' +
-        '<section class="section"><div class="wrap"><div class="join-box"><span class="eyebrow">Join us · 연구실 모집</span><h2>' + esc(R.en.title) + '</h2><p class="hook">' + esc(R.en.hook) +
-        '</p><p>' + esc(R.en.body) + '</p><p><a class="btn btn-primary" href="#join">Open positions</a></p></div></div></section>';
+        '';
     },
 
     research: function () {
