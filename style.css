@@ -224,3 +224,4 @@ img { max-width: 100%; display: block; }
 @media (max-width: 900px) { .side-split { grid-template-columns: 1fr; } }
 .prose.wide { max-width: none; }
 .prose.wide > p, .prose.wide > h2, .prose.wide > ul { max-width: 72ch; }
+.ref-inline { font-size: .92rem; color: var(--muted); }

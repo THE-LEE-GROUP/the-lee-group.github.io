@@ -143,15 +143,15 @@
         '<p class="btn-row"><a class="btn btn-primary" href="https://www.polymergenome.org" target="_blank" rel="noopener noreferrer">Open Polymer Genome →</a></p>' +
         '</div><figure class="figure"><img src="polymer-genome-diffusion-lab.png" alt="Polymer Genome Diffusion Lab: predicted diffusivity of a solvent in a polymer from SMILES inputs, plotted against the training data" width="1750" height="1065" loading="lazy">' +
         '<figcaption>Diffusion Lab on Polymer Genome: enter the polymer and solvent as SMILES, and the platform predicts the solvent diffusivity and places it against the training data.</figcaption></figure></div>' +
-        '<h2>Membrane transport modeling</h2>' +
-        '<p>Polymer Genome also predicts the sorption and diffusion behavior that governs membrane separations. Prof. Lee combined these predictions with Maxwell–Stefan transport theory to simulate how complex liquid mixtures permeate polymer membranes. The model needs only the polymer structure and the feed composition, so candidate membranes can be screened before anything is made in the lab.</p>' +
-        '<p class="btn-row"><a class="btn btn-ghost" href="https://github.com/transport-modeling/asyMemSim" target="_blank" rel="noopener noreferrer">Model code on GitHub (asyMemSim) →</a></p>' +
-        '<h2>Key references</h2><ul class="ref-list">' +
-        '<li>C. Kim et al., Polymer Genome: a data-powered polymer informatics platform for property predictions, <i>The Journal of Physical Chemistry C</i> (2018). <a href="https://doi.org/10.1021/acs.jpcc.8b02913" target="_blank" rel="noopener noreferrer">DOI</a></li>' +
-        '<li><b>Y. J. Lee</b> et al., Data-driven predictions of complex organic mixture permeation in polymer membranes, <i>Nature Communications</i> 14, 4931 (2023). <a href="https://doi.org/10.1038/s41467-023-40257-2" target="_blank" rel="noopener noreferrer">DOI</a></li>' +
-        '<li>J. Nistane, L. Chen, <b>Y. J. Lee</b>, R. P. Lively, R. Ramprasad, Estimation of the Flory-Huggins interaction parameter of polymer-solvent mixtures using machine learning, <i>MRS Communications</i> (2022)</li>' +
-        '<li>J. Nistane, R. Datta, <b>Y. J. Lee</b> et al., Polymer design for solvent separations by integrating simulations, experiments and known physics via machine learning, <i>npj Computational Materials</i> (2025)</li>' +
-        '</ul><p class="source-note">Adapted from the Polymer Genome resource page of the Lively Lab at Georgia Tech. <a href="https://lively.chbe.gatech.edu/polymer-genome" target="_blank" rel="noopener noreferrer">Original page →</a></p></section></div>';
+        '<p class="ref-inline">Reference: C. Kim et al., <i>The Journal of Physical Chemistry C</i> (2018). <a href="https://doi.org/10.1021/acs.jpcc.8b02913" target="_blank" rel="noopener noreferrer">Read the paper →</a></p>' +
+        '<div class="side-split" style="margin-top:28px"><div class="prose"><h2>Membrane transport modeling</h2>' +
+        '<p>The membrane transport model simulates the permeation of complex mixtures through polymer membranes utilizing transport parameters predicted by Polymer Genome. The integration of machine learning predictors for diffusion and sorption properties of molecules with the transport simulation enables the rapid screening of polymer membranes prior to physical experimentation for the separation of complex liquid mixtures.</p>' +
+        '<h3 style="font-size:1.05rem;margin-top:6px">Read the relevant publications</h3><ul class="ref-list">' +
+        '<li><b>Y. J. Lee</b> et al., Data-driven predictions of complex organic mixture permeation in polymer membranes, <i>Nature Communications</i> 14, 4931 (2023). <a href="https://www.nature.com/articles/s41467-023-40257-2" target="_blank" rel="noopener noreferrer">Read →</a></li>' +
+        '<li><i>Journal of Membrane Science</i> (2024). <a href="https://www.sciencedirect.com/science/article/pii/S0376738824009402" target="_blank" rel="noopener noreferrer">Read →</a></li>' +
+        '<li><i>Journal of Membrane Science</i> (2021). <a href="https://www.sciencedirect.com/science/article/pii/S0376738821007110" target="_blank" rel="noopener noreferrer">Read →</a></li>' +
+        '</ul></div><figure class="figure"><img src="membrane-transport-modeling.png" alt="Workflow: polymer and mixture structures feed Polymer Genome ML diffusion and sorption models, which with solvent parameters and operating conditions drive transport modeling to predict partial fluxes and permeate composition" width="1503" height="1307" loading="lazy"></figure></div>' +
+        '<p class="source-note">Adapted from the Polymer Genome resource page of the Lively Lab at Georgia Tech. <a href="https://lively.chbe.gatech.edu/polymer-genome" target="_blank" rel="noopener noreferrer">Original page →</a></p></section></div>';
     },
 
     "lab-life": function () {
