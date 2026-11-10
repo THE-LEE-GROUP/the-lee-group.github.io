@@ -116,7 +116,7 @@
 
     join: function () {
       var box = function (x, lang) {
-        return '<div class="join-box" lang="' + lang + '"' + (lang === "ko" ? ' style="word-break:keep-all"' : "") + '><h2>' + esc(x.title) + '</h2><p class="hook">' + esc(x.hook) + '</p><ul class="role-chips">' +
+        return '<div class="join-box" lang="' + lang + '"' + (lang === "ko" ? ' style="word-break:keep-all"' : "") + '><h2>' + esc(x.title) + '</h2>' + (x.hook ? '<p class="hook">' + esc(x.hook) + '</p>' : '') + '<ul class="role-chips">' +
           x.roles.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") + "</ul><p>" + esc(x.body) + "</p><p>" + esc(x.contact) + " " + mailLink() + "</p></div>";
       };
       return '<div class="wrap"><header class="page-head"><span class="eyebrow">Join Us · 연구실 모집</span><h1>Open positions</h1></header><section class="section" style="display:grid;gap:24px">' +
@@ -247,7 +247,7 @@
     var x = R[lang];
     modal.setAttribute("lang", lang);
     document.getElementById("rTitle").textContent = x.title;
-    document.getElementById("rHook").textContent = x.hook;
+    var hk = document.getElementById("rHook"); hk.textContent = x.hook; hk.hidden = !x.hook;
     document.getElementById("rBody").textContent = x.body;
     document.getElementById("rContact").textContent = x.contact;
     document.getElementById("rMail").textContent = email();
