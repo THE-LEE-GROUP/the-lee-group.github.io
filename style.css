@@ -225,7 +225,3 @@ img { max-width: 100%; display: block; }
 .prose.wide { max-width: none; }
 .prose.wide > p, .prose.wide > h2, .prose.wide > ul { max-width: 72ch; }
 .ref-inline { font-size: .92rem; color: var(--muted); }
-
-.card-fig { margin: -8px -8px 6px; display: grid; gap: 6px; }
-.card-fig img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: #fff; border-radius: 8px; padding: 8px; }
-.card-fig figcaption { font-size: .78rem; color: var(--muted); }

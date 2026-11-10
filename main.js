@@ -42,7 +42,7 @@
   /* ---------- pages ---------- */
   function researchCards(full) {
     return '<div class="grid-3">' + window.RESEARCH.map(function (r, i) {
-      return '<article class="card">' + (full && r.image ? '<figure class="card-fig"><img src="' + esc(r.image) + '" alt="' + esc(r.imageAlt || "") + '" loading="lazy"><figcaption>' + esc(r.caption || "") + '</figcaption></figure>' : '') + '<span class="num">0' + (i + 1) + '</span><h3>' + esc(r.title) +
+      return '<article class="card"><span class="num">0' + (i + 1) + '</span><h3>' + esc(r.title) +
         '</h3><span class="ko-sub">' + esc(r.ko) + '</span><p>' + esc(r.summary) + '</p>' +
         (full ? '<ul>' + r.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>" : "") +
         "</article>";

@@ -50,9 +50,6 @@ window.RECRUIT = {
 window.RESEARCH = [
   {
     id: "data",
-    image: "research-ml.png",
-    imageAlt: "Parity plots of ML-predicted versus experimental diffusivity and sorption in polymers",
-    caption: "Machine-learned diffusivity and sorption versus experiment (Nature Communications, 2023)",
     title: "Data-driven membrane design",
     ko: "데이터 기반 분리막 설계",
     summary: "We predict how complex liquid mixtures permeate polymer membranes using machine learning, starting from nothing more than the polymer structure and the feed composition.",
@@ -64,9 +61,6 @@ window.RESEARCH = [
   },
   {
     id: "transport",
-    image: "research-transport.png",
-    imageAlt: "Schematic of individual versus cohort penetrant motion within a transiently activated zone between polymer chains",
-    caption: "Individual versus cohort motion of penetrants between polymer chains (J. Membr. Sci., 2025)",
     title: "Transport phenomena in polymer membranes",
     ko: "고분자 분리막 내 물질전달 · 열역학",
     summary: "We study how molecules dissolve in and move through dense and microporous polymers, and how coupling between penetrants changes separation performance.",
@@ -78,9 +72,6 @@ window.RESEARCH = [
   },
   {
     id: "nano",
-    image: "research-nano.png",
-    imageAlt: "Self-assembled cross-linked membranes with hexagonally packed cylinders and pore sizes from 0.8 to 0.5 nm",
-    caption: "Self-assembled membranes with sub-nanometer pores tuned from 0.8 to 0.5 nm",
     title: "Nanostructured materials for separations",
     ko: "물 · 유기용매 · 이온 분리용 나노구조 소재",
     summary: "We build polymeric and soft materials with precisely defined sub-nanometer pores to separate water, organic solvents and ions.",
