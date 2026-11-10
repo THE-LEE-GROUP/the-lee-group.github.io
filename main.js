@@ -47,7 +47,7 @@
       return '<section class="hero"><canvas id="heroCanvas" aria-hidden="true"></canvas><div class="wrap"><div class="hero-inner">' +
         '<span class="eyebrow">The Lee Group · Membrane Separations Lab</span>' +
         "<h1>Designing membranes that know which molecules to let through.</h1>" +
-        '<p class="lead">We combine polymer science, transport theory and machine learning to build energy-efficient separations for water, organic solvents and ions.</p>' +
+        '<p class="lead">We study how molecules move through membranes at a fundamental level. Building on that transport theory, we design materials and processes for energy-efficient separations of water, organic solvents and ions, and validate them through rigorous experiments.</p>' +
         '<div class="hero-actions"><a class="btn btn-primary" href="#research">Explore our research</a><a class="btn btn-ghost" href="#join">Join the lab</a></div>' +
         "</div></div></section>" +
         '<section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow">Research</span><h2>What we work on</h2>' +
