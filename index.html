@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="Membrane Separations Lab at Jeonbuk National University, led by Prof. Youngjoo Lee. Polymer membranes, transport phenomena, and AI/ML for separations.">
+<title>The Lee Group · Membrane Separations Lab</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#home" aria-label="Membrane Separations Lab home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="3" y="17" width="34" height="6" rx="1.5" class="bm-membrane"/>
+        <circle cx="12" cy="9" r="3.2" class="bm-small"/>
+        <circle cx="27" cy="8" r="5" class="bm-big"/>
+        <circle cx="20" cy="31" r="3.2" class="bm-small"/>
+        <rect x="18.4" y="17" width="3.2" height="6" class="bm-pore"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Membrane Separations Lab</span>
+        <span class="brand-sub">The Lee Group · Jeonbuk National University</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav class="site-nav" id="siteNav" aria-label="Main">
+      <a href="#home" data-route="home">Home</a>
+      <a href="#research" data-route="research">Research</a>
+      <a href="#pi" data-route="pi">Prof. Lee</a>
+      <a href="#members" data-route="members">Members</a>
+      <a href="#publications" data-route="publications">Publications</a>
+      <a href="#news" data-route="news">News</a>
+      <a href="#join" data-route="join" class="nav-join">Join Us</a>
+      <a href="#contact" data-route="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <!-- 각 페이지 내용은 js/main.js가 js/data.js를 읽어서 채웁니다 -->
+  <div id="view"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <p class="footer-name">The Lee Group · Membrane Separations Lab (MSL) · 분리막연구실</p>
+      <p>Department of Organic Materials and Fiber Engineering, Jeonbuk National University</p>
+      <p id="footAddr"></p>
+    </div>
+    <div class="footer-links">
+      <a href="#contact">Contact</a>
+      <a id="footScholar" href="#" rel="noopener noreferrer" target="_blank">Google Scholar</a>
+      <a href="#join">Join Us</a>
+    </div>
+  </div>
+  <div class="wrap footer-copy">© <span id="year"></span> Membrane Separations Lab, JBNU</div>
+</footer>
+
+<!-- 모집 안내 팝업 -->
+<div class="modal-back" id="recruit" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="rTitle">
+    <div class="modal-top">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" id="rKo" aria-pressed="true">국문</button>
+        <button type="button" id="rEn" aria-pressed="false">English</button>
+      </div>
+      <button type="button" class="modal-x" id="rX" aria-label="Close">×</button>
+    </div>
+    <p class="modal-eyebrow">Now recruiting</p>
+    <h2 id="rTitle"></h2>
+    <p class="modal-hook" id="rHook"></p>
+    <ul class="role-chips" id="rRoles"></ul>
+    <p id="rBody"></p>
+    <p class="modal-contact"><span id="rContact"></span> <strong class="mail" id="rMail"></strong></p>
+    <div class="modal-actions">
+      <a class="btn btn-primary" href="#join" id="rMore"></a>
+      <button type="button" class="btn btn-ghost" id="rSnooze"></button>
+      <button type="button" class="btn btn-text" id="rClose"></button>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
