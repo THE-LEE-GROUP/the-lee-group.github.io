@@ -108,7 +108,7 @@ window.NEWS = [
    교수님 이름은 [Y. J. Lee]처럼 대괄호로 감싸면 굵게 표시됩니다.
    tag: 표시하고 싶은 강조 문구 (없으면 "")  */
 window.PUBS = [
-  { year: 2025, authors: "[Y. J. Lee], J. Nistane, R. Ramprasad, R. P. Lively", title: "Prediction-based trade-off analysis of polymer membranes for organic solvent reverse osmosis of hydrocarbons", venue: "Polymer", ref: "339, 129153", tag: "" },
+  { year: 2025, authors: "[Y. J. Lee], J. Nistane, R. Ramprasad, R. P. Lively", title: "Prediction-based trade-off analysis of polymer membranes for organic solvent reverse osmosis of hydrocarbons", venue: "Polymer", ref: "339, 129153", tag: "Special Topics" },
   { year: 2025, authors: "W. J. Jang, [Y. J. Lee], V. Perez, B. Payero, M. G. Finn, R. P. Lively", title: "The unusual transport of phenolic compounds through poly(triazole) membranes", venue: "Journal of Membrane Science", ref: "125092", tag: "" },
   { year: 2025, authors: "[Y. J. Lee], A. M. Robinson, W. J. Jang, Z. Ye, Y. Ren, Y. Xia, R. P. Lively", title: "Prediction-driven selection of microporous polymer membranes for organic solvent reverse osmosis", venue: "Journal of Membrane Science", ref: "734, 124475", tag: "Editor's Choice" },
   { year: 2025, authors: "J. Nistane, R. Datta, [Y. J. Lee], H. Sahu, S. S. Jang, R. P. Lively, R. Ramprasad", title: "Polymer design for solvent separations by integrating simulations, experiments and known physics via machine learning", venue: "npj Computational Materials", ref: "11, 187", tag: "" },
