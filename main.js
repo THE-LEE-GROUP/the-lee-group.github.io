@@ -86,9 +86,14 @@
     },
 
     research: function () {
-      return '<div class="wrap"><header class="page-head"><span class="eyebrow">Research</span><h1>Research</h1>' +
-        "<p>Our group asks a practical question: given a polymer and a mixture, can we predict the separation before we make the membrane? We answer it with experiments, transport theory and data.</p></header>" +
-        '<section class="section">' + researchCards(true) + "</section></div>";
+      var cards = window.RESEARCH.map(function (r, i) {
+        return '<article class="res-card">' + (r.art ? '<div class="res-art"><img src="' + esc(r.art) + '" alt="" loading="lazy"></div>' : '') +
+          '<div class="res-body"><span class="res-num">0' + (i + 1) + '</span><h3>' + esc(r.title) + '</h3><span class="res-ko">' + esc(r.ko) + '</span>' +
+          '<p>' + esc(r.summary) + '</p><ul>' + r.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + '</ul></div></article>';
+      }).join("");
+      return '<div class="wrap"><header class="res-head"><div><span class="eyebrow">Research</span><h1>Research</h1></div><span class="res-divider" aria-hidden="true"></span>' +
+        '<p>Our group asks a practical question: given a polymer and a mixture, can we <strong>predict the separation before we make the membrane?</strong> We answer it with experiments, transport theory and data.</p></header>' +
+        '<section class="section"><div class="res-grid">' + cards + '</div></section></div>';
     },
 
     pi: function () {

@@ -50,6 +50,7 @@ window.RECRUIT = {
 window.RESEARCH = [
   {
     id: "data",
+    art: "research-art-1.jpg",
     title: "Data-driven membrane design",
     ko: "데이터 기반 분리막 설계",
     summary: "We predict how complex liquid mixtures permeate polymer membranes using machine learning, starting from nothing more than the polymer structure and the feed composition.",
@@ -61,6 +62,7 @@ window.RESEARCH = [
   },
   {
     id: "transport",
+    art: "research-art-2.jpg",
     title: "Transport phenomena in polymer membranes",
     ko: "고분자 분리막 내 물질전달 · 열역학",
     summary: "We study how molecules dissolve in and move through dense and microporous polymers, and how coupling between penetrants changes separation performance.",
@@ -72,6 +74,7 @@ window.RESEARCH = [
   },
   {
     id: "nano",
+    art: "research-art-3.jpg",
     title: "Nanostructured materials for separations",
     ko: "물 · 유기용매 · 이온 분리용 나노구조 소재",
     summary: "We build polymeric and soft materials with precisely defined sub-nanometer pores to separate water, organic solvents and ions.",
