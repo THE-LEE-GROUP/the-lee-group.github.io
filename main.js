@@ -43,8 +43,8 @@
 
   var pages = {
     home: function () {
-      /* Highlights: papers marked highlight: true in data.js */
-      var top = window.PUBS.filter(function (p) { return p.highlight; });
+      /* Highlights: papers with a highlight number in data.js, in that order */
+      var top = window.PUBS.filter(function (p) { return p.highlight; }).sort(function (a, b) { return a.highlight - b.highlight; });
       return '<section class="hero"><canvas id="heroCanvas" aria-hidden="true"></canvas><div class="wrap"><div class="hero-inner">' +
         '<span class="eyebrow">The Lee Group · Membrane Separations Lab</span>' +
         "<h1>Designing membranes that know which molecules to let through.</h1>" +
