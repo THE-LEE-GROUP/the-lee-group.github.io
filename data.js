@@ -163,3 +163,8 @@ window.PI = {
     ["2019", "Fulbright Graduate Study Fellowship (declined)"]
   ]
 };
+
+/* ---------- Lab Life (최신이 위로) ----------
+   photos: 사진 파일 이름 목록. 사진은 저장소에 먼저 올려야 합니다.
+   예: { date: "2027.03", title: "봄 MT", text: "설명", photos: ["life-2027-mt-1.jpg"] }  */
+window.LABLIFE = [];

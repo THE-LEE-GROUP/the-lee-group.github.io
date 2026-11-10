@@ -17,6 +17,28 @@
     set: function (k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
   };
 
+  function crewPage(alumni) {
+    var P = window.PI;
+    var groups = alumni ? [["alumni", "Alumni"]] : [["pi", "Principal Investigator"], ["postdoc", "Postdoctoral Researchers"], ["phd", "Ph.D. Students"], ["ms", "M.S. Students"], ["ug", "Undergraduate Researchers"]];
+    var card = function (m) {
+      var initials = m.name.split(" ").map(function (w) { return w[0]; }).join("").slice(0, 2);
+      return '<article class="member">' + (m.photo ? '<img class="avatar" src="' + esc(m.photo) + '" alt="">' : '<div class="avatar" aria-hidden="true">' + esc(initials) + "</div>") +
+        '<p class="name">' + esc(m.name) + (m.nameKo ? "<span>" + esc(m.nameKo) + "</span>" : "") + '</p><p class="title">' + esc(m.title) + "</p>" +
+        (m.detail ? '<p class="small">' + esc(m.detail) + "</p>" : "") + (m.hobbies ? '<p class="small">Off the bench: ' + esc(m.hobbies) + "</p>" : "") +
+        (m.now ? '<p class="small">Now: ' + esc(m.now) + "</p>" : "") + "</article>";
+    };
+    var all = [{ role: "pi", name: "Youngjoo Lee", nameKo: "이영주", title: "Assistant Professor", detail: "Ph.D., Georgia Institute of Technology", photo: P.photo }].concat(window.MEMBERS);
+    var html = groups.map(function (g) {
+      var list = all.filter(function (m) { return m.role === g[0]; });
+      if (!list.length) return "";
+      return '<div class="member-group"><h3>' + g[1] + '</h3><div class="members">' + list.map(card).join("") + "</div></div>";
+    }).join("");
+    if (alumni && !html) html = '<div class="empty"><p class="name" style="font:700 1.1rem var(--font-display);color:var(--ink)">No alumni yet</p><p>Our first members are still in the lab. Their next steps will be listed here.</p></div>';
+    if (!alumni) html += '<div class="member-group"><h3>Graduate Students &amp; Postdocs</h3><div class="members"><article class="member open"><p class="name">This could be you</p><p class="small">We are recruiting M.S., Ph.D. students and postdocs.</p><a class="link-arrow" href="#join">See open positions →</a></article></div></div>';
+    var tabs = '<div class="chip-row" style="margin-top:8px"><a class="chip" href="#crew" aria-pressed="' + !alumni + '" style="text-decoration:none">Current</a><a class="chip" href="#alumni" aria-pressed="' + alumni + '" style="text-decoration:none">Alumni</a></div>';
+    return '<div class="wrap"><header class="page-head"><span class="eyebrow">The Crew</span><h1>' + (alumni ? "Alumni" : "Current members") + "</h1>" + tabs + '</header><section class="section">' + html + "</section></div>";
+  }
+
   /* ---------- pages ---------- */
   function researchCards(full) {
     return '<div class="grid-3">' + window.RESEARCH.map(function (r, i) {
@@ -82,24 +104,8 @@
         '<h3 style="margin:28px 0 12px">Honors &amp; Awards</h3>' + tl(P.awards) + "</div></section></div>";
     },
 
-    members: function () {
-      var P = window.PI;
-      var groups = [["pi", "Principal Investigator"], ["postdoc", "Postdoctoral Researchers"], ["phd", "Ph.D. Students"], ["ms", "M.S. Students"], ["ug", "Undergraduate Researchers"], ["alumni", "Alumni"]];
-      var card = function (m) {
-        var initials = m.name.split(" ").map(function (w) { return w[0]; }).join("").slice(0, 2);
-        return '<article class="member">' + (m.photo ? '<img class="avatar" src="' + esc(m.photo) + '" alt="">' : '<div class="avatar" aria-hidden="true">' + esc(initials) + "</div>") +
-          '<p class="name">' + esc(m.name) + (m.nameKo ? "<span>" + esc(m.nameKo) + "</span>" : "") + '</p><p class="title">' + esc(m.title) + "</p>" +
-          (m.detail ? '<p class="small">' + esc(m.detail) + "</p>" : "") + (m.hobbies ? '<p class="small">Off the bench: ' + esc(m.hobbies) + "</p>" : "") + "</article>";
-      };
-      var all = [{ role: "pi", name: "Youngjoo Lee", nameKo: "이영주", title: "Assistant Professor", detail: "Ph.D., Georgia Institute of Technology", photo: P.photo }].concat(window.MEMBERS);
-      var html = groups.map(function (g) {
-        var list = all.filter(function (m) { return m.role === g[0]; });
-        if (!list.length) return "";
-        return '<div class="member-group"><h3>' + g[1] + '</h3><div class="members">' + list.map(card).join("") + "</div></div>";
-      }).join("");
-      html += '<div class="member-group"><h3>Graduate Students &amp; Postdocs</h3><div class="members"><article class="member open"><p class="name">This could be you</p><p class="small">We are recruiting M.S., Ph.D. students and postdocs.</p><a class="link-arrow" href="#join">See open positions →</a></article></div></div>';
-      return '<div class="wrap"><header class="page-head"><span class="eyebrow">People</span><h1>Members</h1></header><section class="section">' + html + "</section></div>";
-    },
+    crew: function () { return crewPage(false); },
+    alumni: function () { return crewPage(true); },
 
     publications: function () {
       return '<div class="wrap"><header class="page-head"><span class="eyebrow">Publications</span><h1>Publications</h1>' +
@@ -109,6 +115,49 @@
         '<span class="pub-count" id="pubCount"></span></div><div id="pubList"></div>' +
         '<h2 style="margin-top:48px;font-size:1.4rem">Patents</h2><ul class="pubs">' + window.PATENTS.map(function (p) { return '<li class="pub"><span>' + esc(p) + "</span></li>"; }).join("") + "</ul>" +
         '<h2 style="margin-top:40px;font-size:1.4rem">Dissertation</h2><ul class="pubs"><li class="pub"><span>' + esc(window.THESIS).replace(/\[([^\]]+)\]/g, "<b>$1</b>") + "</span></li></ul></section></div>";
+    },
+
+    osro: function () {
+      return '<div class="wrap"><header class="page-head"><span class="eyebrow">Resources</span><h1>OSRO Trade-Off Curve</h1>' +
+        '<p>A shared benchmark for comparing membranes in organic solvent reverse osmosis.</p></header><section class="section prose">' +
+        '<p>Upper-bound plots gave the gas separation community a common yardstick: one chart where any new membrane can be placed next to everything that came before. Organic solvent reverse osmosis (OSRO), which separates liquid hydrocarbons of similar size under pressure, has lacked an equivalent. The OSRO trade-off curve fills that gap by comparing materials on one standardized separation.</p>' +
+        '<h2>The test mixture</h2>' +
+        '<p>The benchmark uses toluene and 1,3,5-triisopropylbenzene (TIPB). The pair is a practical choice: both molecules are rigid, close in polarity and viscosity, liquid at room temperature, and easy to quantify by gas chromatography. Differences in performance therefore come mainly from the membrane rather than from the mixture.</p>' +
+        '<div class="facts"><div class="fact"><b>Mode</b><span>Cross-flow permeation</span></div><div class="fact"><b>Pressure</b><span>8–60 bar</span></div><div class="fact"><b>Temperature</b><span>293 K</span></div><div class="fact"><b>Feed</b><span>1–10 mol% TIPB in toluene</span></div></div>' +
+        '<h2>Latest curve and data</h2>' +
+        '<p class="source-note">The curve and its master data sheet are compiled and periodically updated by the Lively Lab at Georgia Tech, where Prof. Lee completed his Ph.D. Please use their page for the current figure and data.</p>' +
+        '<p class="btn-row"><a class="btn btn-primary" href="https://lively.chbe.gatech.edu/osro-upper-bound" target="_blank" rel="noopener noreferrer">View the curve at the Lively Lab →</a></p>' +
+        '<h2>Our related work</h2><ul class="ref-list">' +
+        window.PUBS.filter(function (p) { return /reverse osmosis|aliphatic/i.test(p.title); }).map(function (p) {
+          return "<li>" + esc(p.authors).replace(/\[([^\]]+)\]/g, "<b>$1</b>") + ", " + esc(p.title) + ", <i>" + esc(p.venue) + "</i> (" + esc(p.year) + ")</li>";
+        }).join("") + "</ul></section></div>";
+    },
+
+    "polymer-genome": function () {
+      return '<div class="wrap"><header class="page-head"><span class="eyebrow">Resources</span><h1>Polymer Genome</h1>' +
+        '<p>Machine-learned polymer properties, and a transport model that turns them into membrane predictions.</p></header><section class="section prose">' +
+        '<h2>Polymer Genome</h2>' +
+        '<p>Polymer Genome is an online platform that predicts polymer properties from chemical structure using machine learning. A polymer can be entered by drawing its repeat unit or by typing a SMILES string, and the platform returns property estimates within seconds. It grew out of work in Prof. Rampi Ramprasad\'s group, a long-time collaborator.</p>' +
+        '<p class="btn-row"><a class="btn btn-primary" href="https://www.polymergenome.org" target="_blank" rel="noopener noreferrer">Open Polymer Genome →</a></p>' +
+        '<h2>Membrane transport modeling</h2>' +
+        '<p>Polymer Genome also predicts the sorption and diffusion behavior that governs membrane separations. Prof. Lee combined these predictions with Maxwell–Stefan transport theory to simulate how complex liquid mixtures permeate polymer membranes. The model needs only the polymer structure and the feed composition, so candidate membranes can be screened before anything is made in the lab.</p>' +
+        '<p class="btn-row"><a class="btn btn-ghost" href="https://github.com/transport-modeling/asyMemSim" target="_blank" rel="noopener noreferrer">Model code on GitHub (asyMemSim) →</a></p>' +
+        '<h2>Key references</h2><ul class="ref-list">' +
+        '<li>C. Kim et al., Polymer Genome: a data-powered polymer informatics platform for property predictions, <i>The Journal of Physical Chemistry C</i> (2018). <a href="https://doi.org/10.1021/acs.jpcc.8b02913" target="_blank" rel="noopener noreferrer">DOI</a></li>' +
+        '<li><b>Y. J. Lee</b> et al., Data-driven predictions of complex organic mixture permeation in polymer membranes, <i>Nature Communications</i> 14, 4931 (2023). <a href="https://doi.org/10.1038/s41467-023-40257-2" target="_blank" rel="noopener noreferrer">DOI</a></li>' +
+        '<li>J. Nistane, L. Chen, <b>Y. J. Lee</b>, R. P. Lively, R. Ramprasad, Estimation of the Flory-Huggins interaction parameter of polymer-solvent mixtures using machine learning, <i>MRS Communications</i> (2022)</li>' +
+        '<li>J. Nistane, R. Datta, <b>Y. J. Lee</b> et al., Polymer design for solvent separations by integrating simulations, experiments and known physics via machine learning, <i>npj Computational Materials</i> (2025)</li>' +
+        '</ul><p class="source-note">Adapted from the Polymer Genome resource page of the Lively Lab at Georgia Tech. <a href="https://lively.chbe.gatech.edu/polymer-genome" target="_blank" rel="noopener noreferrer">Original page →</a></p></section></div>';
+    },
+
+    "lab-life": function () {
+      var items = window.LABLIFE || [];
+      var body = items.length ? '<div class="life-grid">' + items.map(function (x) {
+        var img = (x.photos && x.photos.length) ? '<img src="' + esc(x.photos[0]) + '" alt="' + esc(x.title) + '" loading="lazy">' : "";
+        return '<article class="life-card">' + img + '<div class="body"><span class="when">' + esc(x.date) + "</span><h3>" + esc(x.title) + "</h3><p>" + esc(x.text) + "</p></div></article>";
+      }).join("") + "</div>" :
+        '<div class="empty"><p style="font:700 1.1rem var(--font-display);color:var(--ink)">Our story starts here</p><p>Photos from conferences, lab outings and everyday moments in the lab will appear here as we make them.</p></div>';
+      return '<div class="wrap"><header class="page-head"><span class="eyebrow">Lab Life</span><h1>Lab Life</h1><p>Research is a team sport. Here is what the crew gets up to, in the lab and beyond it.</p></header><section class="section">' + body + "</section></div>";
     },
 
     news: function () {
@@ -220,14 +269,18 @@
   var view = document.getElementById("view");
   function route() {
     var name = (location.hash || "#home").slice(1);
+    if (name === "members") name = "crew";
+    if (name === "resources") name = "osro";
     if (!pages[name]) name = "home";
     view.innerHTML = pages[name]();
     document.querySelectorAll(".site-nav a").forEach(function (a) {
-      if (a.getAttribute("data-route") === name) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+      var on = a.getAttribute("data-route") === name || (a.getAttribute("data-group") && (a.getAttribute("data-group") === name || document.querySelector('.submenu a[data-route="' + name + '"][data-parent="' + a.getAttribute("data-group") + '"]')));
+      if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     document.getElementById("siteNav").classList.remove("open");
     document.getElementById("navToggle").setAttribute("aria-expanded", "false");
-    document.title = (name === "home" ? "" : name.charAt(0).toUpperCase() + name.slice(1) + " · ") + "The Lee Group · MSL";
+    var titles = { research: "Research", pi: "Prof. Lee", crew: "The Crew", alumni: "Alumni", publications: "Publications", osro: "OSRO Trade-Off Curve", "polymer-genome": "Polymer Genome", news: "News", "lab-life": "Lab Life", join: "Join Us", contact: "Contact" };
+    document.title = (titles[name] ? titles[name] + " · " : "") + "The Lee Group · MSL";
     window.scrollTo(0, 0);
     hero(); bindPubs();
   }
