@@ -143,7 +143,7 @@ window.PI = {
   name: "Youngjoo Lee, Ph.D.",
   nameKo: "이영주 교수",
   title: "Assistant Professor",
-  photo: "img/profile.jpg",
+  photo: "profile.jpg",
   bio: "Youngjoo Lee is an Assistant Professor in the Department of Organic Materials and Fiber Engineering at Jeonbuk National University. He received his Ph.D. in Chemical and Biomolecular Engineering from the Georgia Institute of Technology under Prof. Ryan P. Lively, where he developed machine-learning frameworks that predict complex mixture permeation in polymer membranes. He then worked as a postdoctoral associate with Prof. Chinedum Osuji at the University of Pennsylvania on ion-selective transport through self-assembled membranes with sub-nanometer pores.",
   education: [
     ["2024–2026", "Postdoctoral Associate, Chemical and Biomolecular Engineering, University of Pennsylvania (Advisor: Prof. Chinedum Osuji)"],
