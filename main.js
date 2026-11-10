@@ -137,10 +137,12 @@
 
     "polymer-genome": function () {
       return '<div class="wrap"><header class="page-head"><span class="eyebrow">Resources</span><h1>Polymer Genome</h1>' +
-        '<p>Machine-learned polymer properties, and a transport model that turns them into membrane predictions.</p></header><section class="section prose">' +
-        '<h2>Polymer Genome</h2>' +
+        '<p>Machine-learned polymer properties, and a transport model that turns them into membrane predictions.</p></header><section class="section prose wide">' +
+        '<div class="side-split"><div class="prose"><h2>Polymer Genome</h2>' +
         '<p>Polymer Genome is an online platform that predicts polymer properties from chemical structure using machine learning. A polymer can be entered by drawing its repeat unit or by typing a SMILES string, and the platform returns property estimates within seconds. It grew out of work in Prof. Rampi Ramprasad\'s group, a long-time collaborator.</p>' +
         '<p class="btn-row"><a class="btn btn-primary" href="https://www.polymergenome.org" target="_blank" rel="noopener noreferrer">Open Polymer Genome →</a></p>' +
+        '</div><figure class="figure"><img src="polymer-genome-diffusion-lab.png" alt="Polymer Genome Diffusion Lab: predicted diffusivity of a solvent in a polymer from SMILES inputs, plotted against the training data" width="1750" height="1065" loading="lazy">' +
+        '<figcaption>Diffusion Lab on Polymer Genome: enter the polymer and solvent as SMILES, and the platform predicts the solvent diffusivity and places it against the training data.</figcaption></figure></div>' +
         '<h2>Membrane transport modeling</h2>' +
         '<p>Polymer Genome also predicts the sorption and diffusion behavior that governs membrane separations. Prof. Lee combined these predictions with Maxwell–Stefan transport theory to simulate how complex liquid mixtures permeate polymer membranes. The model needs only the polymer structure and the feed composition, so candidate membranes can be screened before anything is made in the lab.</p>' +
         '<p class="btn-row"><a class="btn btn-ghost" href="https://github.com/transport-modeling/asyMemSim" target="_blank" rel="noopener noreferrer">Model code on GitHub (asyMemSim) →</a></p>' +
