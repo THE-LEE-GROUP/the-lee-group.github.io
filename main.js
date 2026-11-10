@@ -129,7 +129,7 @@
         "<div><dt>Email</dt><dd>" + mailLink() + "</dd></div>" +
         "<div><dt>Office phone</dt><dd>" + esc(L.phone) + "</dd></div>" +
         "<div><dt>Address</dt><dd>" + esc(L.dept) + "<br>" + esc(L.univ) + "<br>" + esc(L.address) + "</dd></div>" +
-        '<div><dt>주소 (국문)</dt><dd class="ko">54896 전북특별자치도 전주시 덕진구 백제대로 567<br>' + esc(L.deptKo) + "</dd></div></dl></section></div>";
+        '<div><dt>주소 (국문)</dt><dd class="ko">' + esc(L.addressKo) + '<br>' + esc(L.deptKo) + "</dd></div></dl></section></div>";
     }
   };
 

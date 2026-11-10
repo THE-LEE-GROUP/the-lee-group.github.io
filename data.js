@@ -17,7 +17,8 @@ window.LAB = {
   emailUser: "yjlee",
   emailDomain: "jbnu.ac.kr",
   phone: "+82-63-270-2351",
-  address: "567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeonbuk-do 54896, Republic of Korea",
+  address: "Room 410, Engineering Building 2, 567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeonbuk State 54896, Republic of Korea",
+  addressKo: "54896 전북특별자치도 전주시 덕진구 백제대로 567 공과대학 2호관 410호",
   scholar: "https://scholar.google.com/citations?user=G1rYg8wAAAAJ&hl=ko"
 };
 
