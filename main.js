@@ -43,8 +43,8 @@
 
   var pages = {
     home: function () {
-      /* Highlights: first-author membrane papers, newest first */
-      var top = window.PUBS.filter(function (p) { return p.authors.indexOf("[Y. J. Lee]") === 0 && /membrane/i.test(p.title); });
+      /* Highlights: papers marked highlight: true in data.js */
+      var top = window.PUBS.filter(function (p) { return p.highlight; });
       return '<section class="hero"><canvas id="heroCanvas" aria-hidden="true"></canvas><div class="wrap"><div class="hero-inner">' +
         '<span class="eyebrow">The Lee Group · Membrane Separations Lab</span>' +
         "<h1>Designing membranes that know which molecules to let through.</h1>" +
