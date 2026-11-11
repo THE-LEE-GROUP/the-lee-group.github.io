@@ -96,7 +96,7 @@ window.MEMBERS = [
     title: "Undergraduate Researcher",
     detail: "B.S. student, Organic Materials and Fiber Engineering (entered 2022)",
     hobbies: "Exercise, photography",
-    photo: ""
+    photo: "member-kim-minwook.jpg"
   }
 ];
 
