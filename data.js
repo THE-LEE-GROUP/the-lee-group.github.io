@@ -161,6 +161,7 @@ window.PI = {
     "AI Coordinator, Department of Organic Materials and Fiber Engineering, JBNU"
   ],
   awards: [
+    ["2026–2031", "Sejong Science Fellowship, National Research Foundation of Korea (세종과학펠로우십)"],
     ["2023", "Student Fellowship Award, 32nd North American Membrane Society Annual Meeting"],
     ["2019–2023", "Graduate Study Fellowship, Kwanjeong Educational Foundation"],
     ["2019", "Fulbright Graduate Study Fellowship (declined)"]
