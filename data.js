@@ -159,7 +159,7 @@ window.PI = {
   service: [
     "Director of International Cooperation, The Membrane Society of Korea",
     "AI Coordinator, Department of Organic Materials and Fiber Engineering, JBNU",
-    "Steering Committee Member, Session 13: Advanced Materials and Processes for Environmental Sustainability, Global Conference on Innovative Materials (GCIM 2027)"
+    "Steering Committee Member, Advanced Materials and Processes for Environmental Sustainability, Global Conference on Innovative Materials (GCIM 2027)"
   ],
   awards: [
     ["2026–2031", "Sejong Science Fellowship, National Research Foundation of Korea (세종과학펠로우십)"],
