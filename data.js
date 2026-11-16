@@ -102,6 +102,7 @@ window.MEMBERS = [
 
 /* ---------- 소식 (최신이 위로) ---------- */
 window.NEWS = [
+  { date: "2026", text: "Prof. Youngjoo Lee receives the Young Researcher Award from The Membrane Society of Korea. Congratulations!" },
   { date: "2026", text: "Min Wook Kim joins the lab as our first undergraduate researcher. Welcome!" },
   { date: "2026", text: "Prof. Youngjoo Lee starts as Assistant Professor at Jeonbuk National University and launches the Membrane Separations Lab." },
   { date: "2025", text: "Our paper on prediction-driven selection of microporous polymer membranes for OSRO is selected as an Editor's Choice in Journal of Membrane Science." },
