@@ -64,3 +64,49 @@
 - Dark mode: primary `#67e8f9`, accent `#22d3ee`, background `#06080b`
 - Research cards: `#0f151c` → `#06080b`, glow `#22d3ee`
 - Sample: `palette-samples/H_Ink_Cyan.png`
+
+
+# 흰색 계열 후보 (2026-11-18)
+
+흰색 계열은 방문자 기기 설정과 상관없이 항상 밝은 화면으로 고정하는 것을 전제로 함.
+
+## W1. 클린 화이트 & 딥 틸
+- 배경 `#ffffff` · 배너 `#f1f7f9` · 글자 `#0b1f2a`
+- 포인트 `#0e7490` · 버튼 `#0e7490`
+- Sample: `palette-samples/W1_Clean_Teal.png`
+
+## W2. 페이퍼 화이트 & 네이비 블루
+- 배경 `#fbfcfe` · 배너 `#f2f5fb` · 글자 `#101b33`
+- 포인트 `#1d4ed8` · 버튼 `#1d4ed8`
+- Sample: `palette-samples/W2_Paper_Navy.png`
+
+## W3. 소프트 화이트 & 버건디
+- 배경 `#fdfcfc` · 배너 `#f8f3f4` · 글자 `#1d1416`
+- 포인트 `#8f1d2f` · 버튼 `#8f1d2f`
+- Sample: `palette-samples/W3_Soft_Burgundy.png`
+
+## W4. 쿨 그레이 화이트 & 잉크 블랙·시안 (현재 색 유지)
+- 배경 `#f7f9fb` · 배너 `#eef2f5` · 글자 `#0b0e13`
+- 포인트 `#0e7490` · 버튼 `#0e7490`
+- Sample: `palette-samples/W4_Gray_Ink_Cyan.png`
+
+## W5. 화이트 & 딥 에메랄드
+- 배경 `#fcfdfc` · 배너 `#f1f7f4` · 글자 `#0f1f1a`
+- 포인트 `#047857` · 버튼 `#047857`
+- Sample: `palette-samples/W5_White_Emerald.png`
+
+## W6. 화이트 & 차콜·골드
+- 배경 `#fcfcfb` · 배너 `#f6f4ef` · 글자 `#1a1a1c`
+- 포인트 `#a16207` · 버튼 `#26262a`
+- Sample: `palette-samples/W6_White_Charcoal_Gold.png`
+
+## W7. 화이트 & 인디고 바이올렛
+- 배경 `#fcfcff` · 배너 `#f3f2fc` · 글자 `#16152b`
+- 포인트 `#4f46e5` · 버튼 `#4f46e5`
+- Sample: `palette-samples/W7_White_Indigo.png`
+
+## W8. 화이트 & 슬레이트·코랄
+- 배경 `#fcfcfd` · 배너 `#f2f4f7` · 글자 `#18212b`
+- 포인트 `#c2410c` · 버튼 `#c2410c`
+- Sample: `palette-samples/W8_White_Slate_Coral.png`
+
