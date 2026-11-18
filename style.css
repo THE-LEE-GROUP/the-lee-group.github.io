@@ -1,30 +1,41 @@
 /* Layout idea: calm editorial lab site; wide hero canvas, then clean single-column sections. */
-/* Current palette: H. Ink Black & Electric Cyan. Other saved palettes: see PALETTES.md */
+/* Current palette: W6. White & Charcoal·Gold (light) + W6 Dark: Charcoal·Gold (dark). Other saved palettes: see PALETTES.md */
 :root {
-  --ink: #0b0e13; --text: #2b313a; --muted: #646b75; --bg: #f7f9fb; --surface: #ffffff;
-    --line: #e0e5ea; --primary: #0b0e13; --primary-soft: #e9eef2; --accent: #0e7490; --accent-soft: #dff4f8;
-  --hero-bg: #07090d;
-  --hero-rgb: 7, 9, 13; --hero-line-rgb: 127, 216, 236; --hero-dot-rgb: 34, 211, 238;
-  --hero-eyebrow: #67e8f9; --hero-lead: #cdd6df;
-  --card-top: #0f151c; --card-bot: #06080b; --glow-rgb: 34, 211, 238; --card-accent: #22d3ee; --card-text: #cdd6df; --card-sub: #94a0ab;
-  --hero-ink: #eef4fa; --on-accent: #ffffff; --fill: #0e7490; --fill-hover: #155e75;
+  --ink: #1a1a1c; --text: #3a3a3e; --muted: #707075; --bg: #fcfcfb; --surface: #ffffff;
+  --line: #e7e5e1; --primary: #26262a; --primary-soft: #f1efea; --accent: #a16207; --accent-soft: #f8efdc;
+  --fill: #26262a; --fill-hover: #000000; --on-accent: #ffffff;
+  --hero-bg: #f6f4ef; --hero-rgb: 246, 244, 239; --hero-line-rgb: 201, 180, 138; --hero-dot-rgb: 161, 98, 7;
+  --hero-eyebrow: #a16207; --hero-lead: #3a3a3e; --hero-title: #1a1a1c; --hero-ghost: #1a1a1c; --hero-ghost-line: #e7e5e1; --hero-ghost-hover: #f1efea;
+  --card-top: #ffffff; --card-bot: #f8f6f1; --glow-rgb: 161, 98, 7; --card-accent: #a16207; --card-text: #3a3a3e; --card-sub: #707075; --card-title: #1a1a1c; --card-body: #3a3a3e;
+  --card-shadow: 0 1px 2px rgba(0,0,0,.05), 0 10px 30px rgba(161,98,7,.10);
+  --hero-ink: #eef4fa;
   --font-display: "Manrope", "Noto Sans KR", system-ui, sans-serif;
   --font-body: "IBM Plex Sans", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
   --radius: 10px;
-  --shadow: 0 1px 2px rgba(11, 14, 19, .06), 0 8px 24px rgba(11, 14, 19, .06);
+  --shadow: 0 1px 2px rgba(26, 26, 28, .06), 0 8px 24px rgba(26, 26, 28, .06);
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ink: #eef3f7; --text: #c6ced6; --muted: #8a939d; --bg: #06080b; --surface: #0f1318;
-    --line: #1f262e; --primary: #67e8f9; --primary-soft: #0f2a30; --accent: #22d3ee; --accent-soft: #0c2a31;
-    --on-accent: #ffffff; color-scheme: dark;
+    --ink: #f3f1ec; --text: #d2cfc8; --muted: #9a968e; --bg: #121214; --surface: #1b1b1e;
+    --line: #2e2d2b; --primary: #e8c47e; --primary-soft: #2a261d; --accent: #e0b45a; --accent-soft: #2f2716;
+    --fill: #d4a64a; --fill-hover: #e8c47e; --on-accent: #16161a;
+    --hero-bg: #161618; --hero-rgb: 22, 22, 24; --hero-line-rgb: 201, 180, 138; --hero-dot-rgb: 224, 180, 90;
+    --hero-eyebrow: #e8c47e; --hero-lead: #d2cfc8; --hero-title: #ffffff; --hero-ghost: #ffffff; --hero-ghost-line: rgba(255,255,255,.35); --hero-ghost-hover: rgba(255,255,255,.1);
+    --card-top: #232326; --card-bot: #151517; --glow-rgb: 224, 180, 90; --card-accent: #e0b45a; --card-text: #d2cfc8; --card-sub: #9a968e; --card-title: #ffffff; --card-body: #e2dfd8;
+    --card-shadow: 0 0 0 1px rgba(224,180,90,.06), 0 14px 40px rgba(224,180,90,.12);
+    color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --ink: #eef3f7; --text: #c6ced6; --muted: #8a939d; --bg: #06080b; --surface: #0f1318;
-    --line: #1f262e; --primary: #67e8f9; --primary-soft: #0f2a30; --accent: #22d3ee; --accent-soft: #0c2a31;
-  --on-accent: #ffffff; color-scheme: dark;
+    --ink: #f3f1ec; --text: #d2cfc8; --muted: #9a968e; --bg: #121214; --surface: #1b1b1e;
+    --line: #2e2d2b; --primary: #e8c47e; --primary-soft: #2a261d; --accent: #e0b45a; --accent-soft: #2f2716;
+    --fill: #d4a64a; --fill-hover: #e8c47e; --on-accent: #16161a;
+    --hero-bg: #161618; --hero-rgb: 22, 22, 24; --hero-line-rgb: 201, 180, 138; --hero-dot-rgb: 224, 180, 90;
+    --hero-eyebrow: #e8c47e; --hero-lead: #d2cfc8; --hero-title: #ffffff; --hero-ghost: #ffffff; --hero-ghost-line: rgba(255,255,255,.35); --hero-ghost-hover: rgba(255,255,255,.1);
+    --card-top: #232326; --card-bot: #151517; --glow-rgb: 224, 180, 90; --card-accent: #e0b45a; --card-text: #d2cfc8; --card-sub: #9a968e; --card-title: #ffffff; --card-body: #e2dfd8;
+    --card-shadow: 0 0 0 1px rgba(224,180,90,.06), 0 14px 40px rgba(224,180,90,.12);
+    color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -80,12 +91,12 @@ img { max-width: 100%; display: block; }
 .hero { position: relative; background: var(--hero-bg); color: var(--hero-ink); overflow: hidden; }
 .hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-inner { position: relative; padding: 88px 0 80px; display: grid; gap: 18px; max-width: 680px; }
-.hero h1 { color: #fff; }
+.hero h1 { color: var(--hero-title); }
 .hero .eyebrow { color: var(--hero-eyebrow); }
 .hero p.lead { font-size: 1.12rem; color: var(--hero-lead); max-width: 58ch; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
-.hero .btn-ghost { color: #fff; border-color: rgba(255,255,255,.35); }
-.hero .btn-ghost:hover { background: rgba(255,255,255,.1); color: #fff; }
+.hero .btn-ghost { color: var(--hero-ghost); border-color: var(--hero-ghost-line); }
+.hero .btn-ghost:hover { background: var(--hero-ghost-hover); color: var(--hero-ghost); }
 
 .eyebrow { font: 700 .78rem var(--font-display); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 8px; font: 700 .95rem var(--font-display); text-decoration: none; border: 1px solid transparent; cursor: pointer; background: none; }
@@ -232,15 +243,15 @@ img { max-width: 100%; display: block; }
 .res-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
 .res-card { position: relative; display: grid; grid-template-rows: auto 1fr; border-radius: 22px; overflow: hidden;
   background: linear-gradient(180deg, var(--card-top) 0%, var(--card-bot) 100%); border: 1px solid rgba(var(--glow-rgb), .35);
-  box-shadow: 0 0 0 1px rgba(var(--glow-rgb), .06), 0 14px 40px rgba(var(--glow-rgb), .16); color: var(--card-text); transition: border-color .2s, box-shadow .2s, transform .2s; }
+  box-shadow: var(--card-shadow); color: var(--card-text); transition: border-color .2s, box-shadow .2s, transform .2s; }
 .res-card:hover { border-color: rgba(var(--glow-rgb), .7); box-shadow: 0 0 0 1px rgba(var(--glow-rgb), .2), 0 18px 48px rgba(var(--glow-rgb), .28); transform: translateY(-2px); }
 .res-art { aspect-ratio: 2 / 1; overflow: hidden; }
 .res-art img { width: 100%; height: 100%; object-fit: cover; -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); }
 .res-body { position: relative; margin-top: -26px; padding: 0 26px 28px; display: grid; gap: 10px; align-content: start; }
 .res-num { font: 800 .95rem var(--font-display); color: var(--card-accent); letter-spacing: .06em; }
-.res-card h3 { color: #fff; font-size: 1.28rem; }
+.res-card h3 { color: var(--card-title); font-size: 1.28rem; }
 .res-ko { font-family: "Noto Sans KR", var(--font-body); font-size: .9rem; color: var(--card-sub); }
-.res-card p { color: #d5e1ee; }
+.res-card p { color: var(--card-body); }
 .res-card ul { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 8px; }
 .res-card li { color: var(--card-text); }
 .res-card li::marker { color: var(--card-accent); }
